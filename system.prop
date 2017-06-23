@@ -26,6 +26,7 @@ audio.offload.video=true
 audio.offload.disable=1
 av.offload.enable=true
 vendor.audio.dolby.ds2.enabled=true
+ro.config.media_vol_steps=25
 
 # Bluetooth
 vendor.qcom.bluetooth.soc=smd
