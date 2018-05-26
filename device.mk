@@ -18,6 +18,11 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/lenovo/A6020/overlay
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 
