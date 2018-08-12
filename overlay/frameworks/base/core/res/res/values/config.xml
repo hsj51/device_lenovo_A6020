@@ -268,4 +268,6 @@
     <!-- Get rid of button backlight option -->
     <integer name="config_buttonBrightnessSettingDefault">0</integer>
     
+    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
 </resources>
