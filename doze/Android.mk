@@ -28,6 +28,8 @@ LOCAL_RESOURCE_DIR := \
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
+LOCAL_SDK_VERSION := current
+
 include $(BUILD_PACKAGE)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
