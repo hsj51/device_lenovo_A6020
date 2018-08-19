@@ -21,7 +21,8 @@ PRODUCT_PACKAGES += \
     copybit.msm8916 \
     hwcomposer.msm8916 \
     libgenlock \
-    memtrack.msm8916
+    memtrack.msm8916 \
+    android.hardware.graphics.composer@2.1-impl
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
