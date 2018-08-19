@@ -490,7 +490,7 @@ service vm_bms /system/vendor/bin/vm_bms
 service charger /charger
     class charger
     group system graphics
-    seclabel u:r:charger:s0
+    #seclabel u:r:charger:s0
 
 service msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
