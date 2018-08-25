@@ -137,7 +137,7 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to < KERN_INFO
+    # Set the console loglevel to
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
 
@@ -406,8 +406,11 @@ service hciattach /system/vendor/bin/sh /system/etc/init.qcom.bt.sh
     seclabel u:r:bluetooth_loader:s0
     oneshot
 
-on property:bluetooth.hciattach=true
+on property:vendor.bluetooth.hciattach=true
     start hciattach
+
+on property:vendor.bluetooth.hciattach=false
+    setprop vendor.bluetooth.status off
 
 # FM
 on property:hw.fm.init=0
