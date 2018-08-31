@@ -15,9 +15,6 @@
 # limitations under the License.
 #
 
-# inherit from the proprietary version
-include vendor/lenovo/A6020/BoardConfigVendor.mk
-
 LOCAL_PATH := device/lenovo/A6020
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
