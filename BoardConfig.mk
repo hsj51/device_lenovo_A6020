@@ -15,7 +15,6 @@
 # limitations under the License.
 #
 
-
 # inherit from the proprietary version
 include vendor/lenovo/A6020/BoardConfigVendor.mk
 
