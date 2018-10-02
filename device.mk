@@ -16,6 +16,11 @@
 # limitations under the License.
 #
 
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/lenovo/A6020/overlay
 
