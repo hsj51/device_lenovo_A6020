@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 
+
 # Overlay
 
 DEVICE_PACKAGE_OVERLAYS += device/lenovo/A6020/overlay
