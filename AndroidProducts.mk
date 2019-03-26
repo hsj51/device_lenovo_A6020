@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_A6020.mk
+    $(LOCAL_DIR)/arrow_A6020.mk
