@@ -275,7 +275,6 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libadiertac.so
 vendor/lib/libbccQTI.so
-vendor/lib/libbtnv.so
 vendor/lib/libcalmodule_akm.so
 vendor/lib/libcalmodule_common.so
 vendor/lib/libcalmodule_gyroscope.so
@@ -484,3 +483,14 @@ vendor/lib64/lib-rtpdaemoninterface.so
 vendor/lib64/lib-rtpsl.so
 vendor/lib64/libimscamera_jni.so
 vendor/lib64/libimsmedia_jni.so
+
+# Vendor Libs - Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/bin/hci_qcomm_init
+vendor/bin/wcnss_filter
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbt-hidlclient.so
+
+# Bluetooth (shared dependencies)
+vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
