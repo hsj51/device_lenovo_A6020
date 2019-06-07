@@ -14,10 +14,20 @@
      limitations under the License.
 -->
 
+<!-- NOTE: Many variables that used to be in this file have been migrated to
+     CarrierConfigManager.java. Please consider whether new variables belong
+     there before adding to this file. Variables here should be more closely
+     related to devices than to networks. -->
+
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
-
     <!-- Show enabled lte option for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>
+
+    <!-- Flag indicating if network query through TelephonyManager.requestNetworkScan() should be
+         disabled.
+         If set to true, it will send network query through Phone.getAvailableNetworks() directly
+         rather than attempt to query through TelephonyManager.requestNetworkScan() first. -->
+    <bool name="config_disable_TelephonyManager_network_scan">true</bool>
 </resources>
