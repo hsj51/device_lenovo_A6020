@@ -8,3 +8,6 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so \
     /system/vendor/lib/libmmcamera2_imglib_modules.so|libshim_atomic.so
 
+# Sp-shim
+TARGET_LD_PRELOAD := \
+    /system/vendor/lib/libboringssl-compat.so

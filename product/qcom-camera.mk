@@ -1,10 +1,11 @@
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
+    libboringssl-compat \
     libbson \
-    libshim_gui \
     libshim_atomic \
-    Snap \
+    libshim_gui \
+    Snap
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 	/system/bin/mediaserver=23 \
