@@ -138,6 +138,9 @@ on fs
     mount_all fstab.qcom
     restorecon_recursive /persist
 
+on late-fs
+    start vendor.devstart_sh
+
 on post-fs-data
     # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
@@ -149,10 +152,6 @@ on post-fs-data
     mkdir /data/misc/perfd 2755 root system
     mkdir /data/system/perfd 2770 root system
 
-    # Create directories for Location services
-    mkdir /data/misc/location 0770 gps gps
-    mkdir /data/misc/location/mq 0770 gps gps
-    mkdir /data/misc/location/xtwifi 0770 gps gps
 
     # Create the directories used by the Wireless subsystem
     mkdir /data/vendor/wifi 0770 wifi wifi
@@ -221,11 +220,20 @@ on enable-low-power
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/camera-daemon/cpus 4-7
 
+
     setprop ro.min_freq_0 200000
     setprop ro.min_freq_4 800000
 
     # change GPU initial power level from 400Mhz(level 2) to 220MHz(level 3)
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 3
+
+service vendor.devstart_sh /vendor/bin/init.qcom.devstart.sh
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+    
 
 #start camera server as daemon
 service qcamerasvr /system/vendor/bin/mm-qcamera-daemon

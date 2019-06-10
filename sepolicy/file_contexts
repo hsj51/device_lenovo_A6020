@@ -1,2 +1,5 @@
 # Persist
 /dev/block/platform/soc.0/7824900.sdhci/by-name/persist    u:object_r:persist_block_device:s0
+
+# Init shell scripts
+/(vendor|system/vendor)/bin/init\.qcom\.devstart\.sh u:object_r:init-qcom-devstart-sh_exec:s0
