@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/lenovo/A6020/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product-if-exists, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product-if-exists, vendor/aosp/common.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -30,7 +30,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A6020
-PRODUCT_NAME := lineage_A6020
+PRODUCT_NAME := aosp_A6020
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Vibe K5
 PRODUCT_MANUFACTURER := Lenovo
