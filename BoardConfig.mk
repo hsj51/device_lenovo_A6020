@@ -225,6 +225,7 @@ BOARD_PROVIDES_LIBRIL := false
 # SELinux
 #BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 #PLAT_PRIVATE_POLICY += $(DEVICE_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += device/lenovo/A6020/sepolicy-tmp
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
