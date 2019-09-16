@@ -26,6 +26,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aosip
 
 $(call inherit-product, vendor/lenovo/A6020/A6020-vendor.mk)
+
+# APEX
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ld.config.txt:system/etc/swcodec/ld.config.txt
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -72,6 +77,7 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     memtrack.msm8916
 
+# Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
 
