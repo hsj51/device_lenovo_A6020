@@ -1,4 +1,3 @@
-
 #
 # Copyright (C) 2015-2016 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
@@ -316,7 +315,7 @@ PRODUCT_PACKAGES += \
 
 #Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-service \
+    android.hardware.audio.service \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl
 
