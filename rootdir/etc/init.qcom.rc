@@ -276,8 +276,9 @@ service thermal-engine /system/vendor/bin/thermal-engine
 
 service time_daemon /system/vendor/bin/time_daemon
     class main
-    user root
-    group root
+    user system
+    group system
+    capabilities SYS_TIME
     writepid /dev/cpuset/system-background/tasks
 
 service power_off_alarm /system/vendor/bin/power_off_alarm
