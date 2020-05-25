@@ -116,7 +116,6 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
-TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
