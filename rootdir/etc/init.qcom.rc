@@ -183,7 +183,7 @@ on fs
     mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
 
 on post-fs
-    start qseecomd
+    start vendor.qseecomd
 
 on post-fs-data
     # Create folder for mm-qcamera-daemon
@@ -258,7 +258,7 @@ on property:init.svc.media=restarting
 on property:init.svc.servicemanager=restarting
     restart qcamerasvr
 
-service qseecomd /system/vendor/bin/qseecomd
+service vendor.qseecomd /system/vendor/bin/qseecomd
     class core
     user root
     group root
