@@ -21,7 +21,7 @@ $(call inherit-product, vendor/lenovo/A6020/A6020-vendor.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pa
+    $(LOCAL_PATH)/overlay-aex
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -182,10 +182,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:system/vendor/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/vendor/etc/usb_audio_policy_configuration.xml
 
-# ParanoidDoze
-PRODUCT_PACKAGES += \
-    ParanoidDoze
-
 # Privapp permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml
@@ -230,10 +226,18 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# RRO
+PRODUCT_ENFORCE_RRO_TARGETS += \
+    frameworks-res
+
 # Telephony
 PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml
+    qti_telephony_hidl_wrapper.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Thermal
 PRODUCT_COPY_FILES += \
@@ -275,8 +279,14 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     ueventd.qcom.rc
 
+# Seccomp
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:system/vendor/etc/seccomp_policy/mediacodec.policy
+
+
 ###===============================================######
 ##HIDL packages
+
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -324,7 +334,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service
+    android.hardware.power@1.2-service-qti
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

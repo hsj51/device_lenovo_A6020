@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2020 Paranoid Android
+
+    Copyright 2020 AospExtended Android Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -13,10 +14,19 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
 -->
 <resources>
 
-    <!-- Allow devices to hide black gradient behind QS Panel -->
-    <bool name="config_hideQSBlackGradient">true</bool>
-
+    <!-- Hardware keys present on the device, stored as a bit field.
+         This integer should equal the sum of the corresponding value for each
+         of the following keys present:
+             1 - Home
+             2 - Back
+             4 - Menu
+             8 - Assistant
+             16 - Recents
+         For example, a device with Home, Back and Recents keys would set this
+         config to 19. -->
+    <integer name="config_deviceHardwareKeys">19</integer>
 </resources>
