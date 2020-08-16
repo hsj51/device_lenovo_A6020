@@ -55,7 +55,8 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 # Dirac
 PRODUCT_PACKAGES += \
-    Dirac
+    Dirac \
+    LenovoParts
 
 # Display
 PRODUCT_PACKAGES += \
