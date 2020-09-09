@@ -83,7 +83,7 @@ PRODUCT_PACKAGES += \
 # Encryption
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-	
+
 PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor \
@@ -213,7 +213,7 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     libqcompostprocbundle \
     tinymix \
-    audio.a2dp.default \
+    audio.a2dp.default
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -310,7 +310,9 @@ PRODUCT_COPY_FILES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.manager@1.0
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0_system
 
 #Audio
 PRODUCT_PACKAGES += \
