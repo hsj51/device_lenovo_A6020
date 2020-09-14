@@ -182,6 +182,9 @@ on fs
 
     mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
 
+    rm /cache/boot_lc_main.txt
+    start boot_lc_main
+
 on post-fs
     start vendor.qseecomd
 
@@ -237,6 +240,15 @@ on post-fs-data
 
     start vm_bms
     setprop vold.post_fs_data_done 1
+
+    #Logcat
+    mkdir /data/local/tmp/logs 0775 system system
+    start persistentLogging
+
+service persistentLogging /system/bin/logcat -f /data/local/tmp/logs/log
+    user system
+    group root system log
+    disabled
 
 service wcnss-service /system/vendor/bin/wcnss_service
     class late_start
@@ -418,6 +430,13 @@ service qcom-sh /system/vendor/bin/init.qcom.sh
 service qcom-post-boot /system/vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
+    disabled
+    oneshot
+
+service boot_lc_main /system/bin/logcat -f /cache/boot_lc_main.txt
+    class main
+    user root
+    group root system log
     disabled
     oneshot
 
