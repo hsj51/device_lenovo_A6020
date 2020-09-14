@@ -204,7 +204,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8916 \
     libbson \
-    Snap
+    Camera2
+#    Snap
 
 # GPS
 PRODUCT_PACKAGES += \
