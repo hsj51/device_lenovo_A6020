@@ -217,6 +217,8 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib/libril-qc-qmi-1.so|libaudioclient_shim.so \
+    /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so \
     /system/vendor/lib/libril-qc-qmi-1.so|libcutils_shim.so \
     /system/vendor/lib64/libril-qc-qmi-1.so|libcutils_shim.so \
     /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \

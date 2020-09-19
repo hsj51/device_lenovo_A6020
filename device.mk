@@ -242,7 +242,8 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libcutils_shim \
     librmnetctl \
-    libxml2
+    libxml2 \
+    libaudioclient_shim
 
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS += \
