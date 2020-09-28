@@ -238,6 +238,7 @@ PRODUCT_COPY_FILES += \
 # RIL
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
+    libcutils_shim \
     librmnetctl \
     libxml2
 
