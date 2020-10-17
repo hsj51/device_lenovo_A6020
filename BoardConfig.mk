@@ -175,6 +175,9 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/lenovo/msm8916
 TARGET_KERNEL_CONFIG := A6020_defconfig
 
+# Kernel memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
