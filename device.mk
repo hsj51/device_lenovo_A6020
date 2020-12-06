@@ -92,10 +92,6 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
-# Keystore
-PRODUCT_PACKAGES += \
-    keystore.msm8916
-
 # Firmware patch
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/move_files.sh:install/bin/move_files.sh
