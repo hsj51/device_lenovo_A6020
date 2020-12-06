@@ -37,4 +37,7 @@
     <!-- Do not translate. Default access point SSID used for local only hotspot -->
     <string name="wifi_localhotspot_configure_ssid_default" translatable="false">Lenovo Vibe K5</string>
 
+    <!-- Indicates that AP mode MAC randomization is supported on this device -->
+    <bool translatable="false" name="config_wifi_ap_mac_randomization_supported">false</bool>
+
 </resources>
