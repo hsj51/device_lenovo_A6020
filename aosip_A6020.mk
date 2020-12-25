@@ -37,3 +37,10 @@ PRODUCT_MODEL := Vibe K5
 PRODUCT_MANUFACTURER := Lenovo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
+
+# ADB props
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
