@@ -76,8 +76,10 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-	/system/bin/mediaserver=23 \
-	/system/vendor/bin/mm-qcamera-daemon=23
+    /system/bin/cameraserver=23 \
+    /system/bin/mediaserver=23 \
+    /system/vendor/bin/mm-qcamera-daemon=23 \
+    /system/vendor/bin/ims_rtp_daemon=23
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Charger
