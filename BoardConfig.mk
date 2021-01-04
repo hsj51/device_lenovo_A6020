@@ -217,7 +217,7 @@ TARGET_USES_OLD_MNC_FORMAT := true
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-PLAT_PRIVATE_POLICY += $(DEVICE_PATH)/sepolicy/private
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
