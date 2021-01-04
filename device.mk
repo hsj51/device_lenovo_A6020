@@ -22,10 +22,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/lenovo/A6020/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-aosip
 
 $(call inherit-product, vendor/lenovo/A6020/A6020-vendor.mk)
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
