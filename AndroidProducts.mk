@@ -19,5 +19,5 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     aosp_A6020-eng \
-    aosp_A6020-user \
+
     aosp_A6020-userdebug
