@@ -18,6 +18,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/revengeos_A6020.mk
 
 COMMON_LUNCH_CHOICES := \
-#    revengeos_A6020-eng \
+    revengeos_A6020-eng \
     revengeos_A6020-user \
     revengeos_A6020-userdebug
