@@ -186,4 +186,7 @@ void vendor_load_properties()
     // Init a dummy BT MAC address, will be overwritten later
     property_override("ro.boot.btmacaddr", "00:00:00:00:00:00");
 
+    //Ril
+    property_override("ro.ril.svlte1x", "true");
+    property_override("ro.ril.svdo", "true");
 }
