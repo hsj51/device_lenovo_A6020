@@ -8,3 +8,5 @@ allow system_server vfat:dir { open read };
 
 get_prop(system_server, qemu_hw_mainkeys_prop)
 get_prop(system_server, exported_camera_prop);
+get_prop(system_server, userspace_reboot_exported_prop);
+get_prop(system_server, userspace_reboot_config_prop);
